@@ -9,23 +9,29 @@ Evidencia de la ejecución de las **pruebas de aceptación end-to-end** (Cypress
 
 ```
 videos/
-├── admin/         # Gestión administrativa (facultades, programas, departamentos, usuarios...)
-├── auth/          # Autenticación y sesión
-├── evaluations/   # Carga y análisis de evaluaciones docentes
-└── security/      # Control de acceso y aislamiento de datos entre departamentos
+├── admin/          # Gestión administrativa (facultades, programas, departamentos, usuarios...)
+├── auth/           # Autenticación y sesión
+├── evaluations/    # Carga y análisis de evaluaciones docentes
+├── notifications/  # Centro de notificaciones
+├── plans/          # Planes de mejoramiento docente
+├── reports/        # Reportes y consultas de resultados
+└── security/       # Control de acceso y aislamiento de datos entre departamentos
 ```
 
 ## Resultado de la última corrida
 
 | Suites | Tests | Aprobados | Fallidos | Duración |
 |---|---|---|---|---|
-| 24 | 94 | 94 (100%) | 0 | ~5 min |
+| 37 | 149 | 149 (100%) | 0 | ~10 min |
 
 ## Módulos cubiertos
 
 - **`admin/`** — CRUD de facultades, programas, departamentos, grupos académicos, directores, usuarios y consulta del historial de auditoría.
 - **`auth/`** — Inicio de sesión, selección de rol y manejo del token de sesión (expirado, ausente, renovación).
 - **`evaluations/`** — Carga de evaluaciones (y sus distintas modalidades), extracción y descarga de PDF, estado de procesamiento, análisis con IA, clasificación y visualización de comentarios, alertas, y renombrado de cursos.
+- **`notifications/`** — Centro de notificaciones: badge con el conteo de no leídas, listado, búsqueda y filtros por tipo/estado, y marcado de leídas (individual o masivo).
+- **`plans/`** — Planes de mejoramiento docente: sugerencia de candidatos y creación, seguimiento (Formato 3), evidencias, acta y documentos (Formatos 1 a 3), cierre y verificación automática, correos de notificación, e historial de planes del docente.
+- **`reports/`** — Reportes y consultas de resultados: resumen del departamento por periodo, materias, detalle y comparaciones del docente, y ranking docente.
 - **`security/`** — Control de acceso por rol, aislamiento de información entre departamentos y restricciones de acceso a evaluaciones ajenas.
 
 ## Cómo consultar la evidencia
